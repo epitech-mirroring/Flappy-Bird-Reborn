@@ -130,8 +130,13 @@ public:
     json::IJsonObject *serializeData() override;
 
 private:
-    std::chrono::time_point<std::chrono::system_clock> startTime; ///< Start time for score tracking
-    std::chrono::time_point<std::chrono::system_clock> actualTime; ///< Current time
+    #ifdef _WIN32
+     std::chrono::steady_clock::time_point startTime;
+     std::chrono::steady_clock::time_point actualTime;
+    #else
+     std::chrono::system_clock::time_point startTime;
+     std::chrono::system_clock::time_point actualTime;
+    #endif // _WIN32
     unsigned int score = 0; ///< Current game score
     float timeBeforePipe = 8.5f; ///< Time before next pipe spawns
     bool gameLost = false; ///< Indicates if the game is lost

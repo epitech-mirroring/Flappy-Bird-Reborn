@@ -153,8 +153,13 @@ public:
 private:
     float speed = 300.0f; ///< Speed of the pipes' movement
     float spawnRate = 2.00f; ///< Rate at which pipes spawn
-    std::chrono::time_point<std::chrono::system_clock> startTime; ///< Start time for pipes
-    std::chrono::time_point<std::chrono::system_clock> actualTime; ///< Current time
+    #ifdef _WIN32
+     std::chrono::steady_clock::time_point startTime;
+     std::chrono::steady_clock::time_point actualTime;
+    #else
+     std::chrono::system_clock::time_point startTime;
+     std::chrono::system_clock::time_point actualTime;
+    #endif // _WIN32
     std::vector<UUID> pipes; ///< List of pipes spawned
     bool gameLost = false; ///< Indicates if the game is lost
 };
