@@ -122,8 +122,13 @@ public:
 
 private:
     float speed = 1.00f; ///< Speed of the background scrolling
-    std::chrono::time_point<std::chrono::system_clock> startTime; ///< Start time of the background
-    std::chrono::time_point<std::chrono::system_clock> actualTime; ///< Current time
+    #ifdef _WIN32
+     std::chrono::steady_clock::time_point startTime;
+     std::chrono::steady_clock::time_point actualTime;
+    #else
+     std::chrono::system_clock::time_point startTime;
+     std::chrono::system_clock::time_point actualTime;
+    #endif // _WIN32
     bool gameLost = false; ///< Indicates if the game is lost
 };
 
