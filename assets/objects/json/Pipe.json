@@ -9,30 +9,70 @@
     {
       "name": "Transform",
       "data": {
-        "position": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
+        "invisible": {
+          "Position": {
+            "x": 1000.0,
+            "y": 1000.0,
+            "z": 1000.0
+          },
+          "Rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "Scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
         }
       }
     },
     {
       "name": "RigidBody",
-      "data": null
+      "data": {
+        "invisible": {
+          "Acceleration": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "Velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "TerminalVelocity": 0.0,
+          "Drag": 0.0,
+          "Collider": "d9e329e7-b3bf-412e-86a5-f8e18f7107bb"
+        }
+      }
     },
     {
       "name": "Sprite",
-      "data": "assets/objects/assets/pipe.png"
+      "data": {
+        "invisible": {
+          "Texture": "assets/objects/assets/pipe.png"
+        }
+      }
+    },
+    {
+      "name": "Box",
+      "uuid": "d9e329e7-b3bf-412e-86a5-f8e18f7107bb",
+      "data": {
+        "invisible": {
+          "Position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "Size": {
+            "x": 140.0,
+            "y": 890.0,
+            "z": 1.0
+          }
+        }
+      }
     }
   ]
 }

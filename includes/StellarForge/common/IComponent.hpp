@@ -15,6 +15,7 @@
 
 #include "json/IJsonObject.hpp"
 #include "json/JsonObject.hpp"
+#include "UUID.hpp"
 
 // Forward declaration of IObject
 class IObject;
@@ -98,6 +99,23 @@ public:
   * @author Aubane NOURRY
   */
  virtual bool isActive() = 0;
+
+ /**
+  * @brief  Set the UUID of the component
+  * @version v0.1.0
+  * @since v0.1.0
+  * @author Landry GIGANT
+  */
+ [[ nodiscard ]] virtual UUID getUUID() const = 0;
+
+ /**
+  * @brief  Set the UUID of the component
+  * @param uuid The UUID to set
+  * @version v0.1.0
+  * @since v0.1.0
+  * @author Landry GIGANT
+  */
+ virtual void setUUID(UUID uuid) = 0;
 
  /**
   * @class IComponent::IMeta
@@ -253,6 +271,11 @@ public:
     */
    [[nodiscard]]
    virtual std::any getValue() const = 0;
+
+   [[nodiscard]]
+   virtual json::IJsonObject *serialize() const = 0;
+
+   virtual void deserialize(const json::IJsonObject *data) = 0;
   };
 
   /**

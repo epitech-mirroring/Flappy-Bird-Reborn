@@ -9,39 +9,47 @@
     {
       "name": "Transform",
       "data": {
-        "position": {
-          "x": 950.0,
-          "y": 100.0,
-          "z": 20.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
+        "invisible": {
+          "Position": {
+            "x": 950.0,
+            "y": 100.0,
+            "z": 20.0
+          },
+          "Rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "Scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
         }
       }
     },
     {
       "name": "UIText",
       "data": {
-        "text": "0",
-        "size": 40,
-        "color": {
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "a": 255
+        "invisible": {
+          "Text": "0",
+          "Size": 40,
+          "Color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          }
         }
       }
     },
     {
       "name": "Score",
-      "data": null
+      "data": {
+        "invisible": {
+          "Script": "assets/scripts/Score.cpp"
+        }
+      }
     }
   ]
 }

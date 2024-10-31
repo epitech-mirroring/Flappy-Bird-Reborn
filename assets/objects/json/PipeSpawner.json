@@ -8,7 +8,11 @@
   "components": [
     {
       "name": "Pipes",
-      "data": null
+      "data": {
+        "invisible": {
+          "Script": "assets/scripts/Pipes.cpp"
+        }
+      }
     }
   ]
 }

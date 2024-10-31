@@ -18,7 +18,6 @@ void Bird::start()
     rigidbody->_acceleration = Vector3(0, 500, 0);
     rigidbody->_terminalVelocity = 500;
     rigidbody->_drag = 10;
-    rigidbody->_collider = new Box(Vector3(0, 0, 0), Vector3(10, 60, 0));
 
     EventSystem::getInstance().registerListener("space_pressed", [this](const EventData& data) {
         if (!isDead) {
