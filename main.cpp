@@ -12,16 +12,19 @@
 #include "assets/objects/scripts/Score.hpp"
 #include "StellarForge/Engine/Engine.hpp"
 #include "StellarForge/Common/factories/ComponentFactory.hpp"
+#include "StellarForge/Common/components/DynamicComponentLoader.hpp"
 #include <iostream>
 
 int main(int argc, char* argv[])
 {
     try {
-        Engine const engine([]() {
+        auto loader = DynamicComponentLoader("assets/components");
+        Engine const engine([&loader]() {
             REGISTER_COMPONENT(Background);
             REGISTER_COMPONENT(Bird);
             REGISTER_COMPONENT(Pipes);
             REGISTER_COMPONENT(Score);
+            loader.loadComponents();
         }, "FlappyBird");
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;

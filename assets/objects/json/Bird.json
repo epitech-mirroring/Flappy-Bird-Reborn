@@ -90,6 +90,11 @@
           "Script": "assets/objects/scripts/Bird.lua"
         }
       }
+    },
+    {
+      "name": "DynamicComponent",
+      "data": {
+      }
     }
   ]
 }

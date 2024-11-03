@@ -26,3 +26,5 @@ target_sources(flappy-bird
         ${CMAKE_CURRENT_SOURCE_DIR}/assets/objects/scripts/Pipes.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/assets/objects/scripts/Score.cpp
 )
+
+add_subdirectory(assets/components)
