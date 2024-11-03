@@ -7,6 +7,8 @@
 
 #include "Background.hpp"
 
+using Vector3 = glm::vec3;
+
 Background::Background(IObject *owner, const json::IJsonObject *data) : CPPMonoBehaviour(owner) {}
 
 void Background::start() {
@@ -54,6 +56,7 @@ void Background::deserialize(const json::IJsonObject *data) {}
 
 void Background::end() {}
 
-json::IJsonObject *Background::serializeData() {
+json::IJsonObject *Background::serializeData() const
+{
     return nullptr;
 }

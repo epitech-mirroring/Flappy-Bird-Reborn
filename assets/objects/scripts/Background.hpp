@@ -9,10 +9,10 @@
 #define BACKGROUND_HPP
 
 #include <chrono>
-#include "common/components/CPPMonoBehaviour.hpp"
-#include "common/components/Transform.hpp"
-#include "common/json/JsonObject.hpp"
-#include "common/event/EventSystem.hpp"
+#include "StellarForge/Common/components/CPPMonoBehaviour.hpp"
+#include "StellarForge/Common/components/Transform.hpp"
+#include "StellarForge/Common/json/JsonObject.hpp"
+#include "StellarForge/Common/event/EventSystem.hpp"
 
 /**
  * @class Background
@@ -118,7 +118,7 @@ public:
      * @since v0.1.0
      * @author Aubane Nourry
      */
-    json::IJsonObject *serializeData() override;
+    json::IJsonObject *serializeData() const override;
 
 private:
     float speed = 1.00f; ///< Speed of the background scrolling

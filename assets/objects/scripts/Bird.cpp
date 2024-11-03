@@ -7,6 +7,8 @@
 
 #include "Bird.hpp"
 
+using Vector3 = glm::vec3;
+
 Bird::Bird(IObject *owner, const json::IJsonObject *data) : CPPMonoBehaviour(owner)
 {
 }
@@ -87,7 +89,7 @@ void Bird::end()
 {
 }
 
-json::IJsonObject *Bird::serializeData()
+json::IJsonObject *Bird::serializeData() const
 {
     return nullptr;
 }

@@ -9,11 +9,11 @@
 #define SCORE_HPP
 
 #include <chrono>
-#include "common/components/CPPMonoBehaviour.hpp"
-#include "common/components/Transform.hpp"
-#include "graphics/components/UIText.hpp"
-#include "common/json/JsonObject.hpp"
-#include "common/event/EventSystem.hpp"
+#include "StellarForge/Common/components/CPPMonoBehaviour.hpp"
+#include "StellarForge/Common/components/Transform.hpp"
+#include "StellarForge/Graphics/components/UIText.hpp"
+#include "StellarForge/Common/json/JsonObject.hpp"
+#include "StellarForge/Common/event/EventSystem.hpp"
 
 /**
  * @class Score
@@ -127,7 +127,7 @@ public:
      * @since v0.1.0
      * @author Aubane Nourry
      */
-    json::IJsonObject *serializeData() override;
+    json::IJsonObject *serializeData() const override;
 
 private:
     #ifdef _WIN32

@@ -10,8 +10,8 @@
 #include "assets/objects/scripts/Bird.hpp"
 #include "assets/objects/scripts/Pipes.hpp"
 #include "assets/objects/scripts/Score.hpp"
-#include "engine/Engine.hpp"
-#include "common/factories/ComponentFactory.hpp"
+#include "StellarForge/Engine/Engine.hpp"
+#include "StellarForge/Common/factories/ComponentFactory.hpp"
 #include <iostream>
 
 int main(int argc, char* argv[])

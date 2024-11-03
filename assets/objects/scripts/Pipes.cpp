@@ -6,7 +6,9 @@
 */
 
 #include "Pipes.hpp"
-#include "graphics/components/Sprite.hpp"
+#include "StellarForge/Graphics/components/Sprite.hpp"
+
+using Vector3 = glm::vec3;
 
 Pipes::Pipes(IObject *owner, const json::IJsonObject *data)
     : CPPMonoBehaviour(owner)
@@ -116,7 +118,7 @@ void Pipes::end()
 {
 }
 
-json::IJsonObject *Pipes::serializeData()
+json::IJsonObject *Pipes::serializeData() const
 {
     return nullptr;
 }

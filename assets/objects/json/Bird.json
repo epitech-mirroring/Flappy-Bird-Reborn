@@ -82,6 +82,14 @@
           }
         }
       }
+    },
+    {
+      "name": "LuaScriptComponent",
+      "data": {
+        "invisible": {
+          "Script": "assets/objects/scripts/Bird.lua"
+        }
+      }
     }
   ]
 }

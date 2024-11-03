@@ -9,13 +9,13 @@
 #define STELLARFORGE_PIPES_HPP
 
 #include <chrono>
-#include "common/components/CPPMonoBehaviour.hpp"
-#include "common/components/Transform.hpp"
-#include "physics/components/RigidBody.hpp"
-#include "common/json/JsonObject.hpp"
-#include "common/event/EventSystem.hpp"
-#include "common/managers/ObjectManager.hpp"
-#include "physics/Box.hpp"
+#include "StellarForge/Common/components/CPPMonoBehaviour.hpp"
+#include "StellarForge/Common/components/Transform.hpp"
+#include "StellarForge/Physics/components/RigidBody.hpp"
+#include "StellarForge/Common/json/JsonObject.hpp"
+#include "StellarForge/Common/event/EventSystem.hpp"
+#include "StellarForge/Common/managers/ObjectManager.hpp"
+#include "StellarForge/Physics/Box.hpp"
 
 /**
  * @class Pipes
@@ -148,7 +148,7 @@ public:
      * @since v0.1.0
      * @author Landry Gigant
      */
-    json::IJsonObject *serializeData() override;
+    json::IJsonObject *serializeData() const override;
 
 private:
     float speed = 300.0f; ///< Speed of the pipes' movement

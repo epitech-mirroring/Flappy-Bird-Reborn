@@ -2,10 +2,10 @@
 cmake/3.29.7
 
 [requires]
-asio/1.31.0
 glm/1.0.1
 sfml/2.6.1
 gtest/1.15.0
+stellar-forge/v0.2.0
 
 [generators]
 CMakeDeps

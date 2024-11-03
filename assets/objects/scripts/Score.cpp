@@ -7,6 +7,8 @@
 
 #include "Score.hpp"
 
+using Vector3 = glm::vec3;
+
 Score::Score(IObject *owner, const json::IJsonObject *data) : CPPMonoBehaviour(owner) {}
 
 void Score::onGameLost(const EventData &data) {
@@ -60,6 +62,6 @@ void Score::deserialize(const json::IJsonObject *data) {}
 
 void Score::end() {}
 
-json::IJsonObject *Score::serializeData() {
+json::IJsonObject *Score::serializeData() const {
     return nullptr;
 }
